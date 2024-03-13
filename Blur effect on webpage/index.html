@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blur effect website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="blur-area">
+        </div>
+            <nav>
+                <img src="/blur effect on webpage/logo.png" class="logo" alt="">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">CONTACT US</a></li>
+                </ul>
+          
+
+
+   
+    </nav>
+    <div class="text-box">
+        <h1>How TO Make  Website</h1>
+        <button type="button">Explore More</button>
+    </div>
+
+
+    </div>
+    <script>
+        var blurArea= document.getElementById("blur-area");
+        document.onmousemove =function(e){
+            blurArea.style.transform=`translate(${e.pageX}px,${e.pageY}px)`;
+        }
+    </script>
+
+</body>
+
+</html>

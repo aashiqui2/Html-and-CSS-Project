@@ -1,0 +1,22 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #333;
+    color: #fff;
+}
+
+.sortable-container {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.cortable-items {
+    background-color: #555;
+    padding: 10px;
+    margin: 5px;
+    cursor: grab;
+    border-radius: 5px;
+}
+
+.sortable-ghost {
+    background-color: #777;
+}
