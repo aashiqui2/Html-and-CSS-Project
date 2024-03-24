@@ -1,0 +1,51 @@
+<html>
+<head>
+
+
+</head>
+
+<body>
+
+<h2> Image Slider </h2>
+<img src="./gnu.jpeg" id="i1" width=500 height=400>
+<br> <br>
+<button  onclick ="forward()"> <span>Next</span> </button>
+<button  onclick ="backward()">Previous</button>
+
+<script>
+photos = ["1.jpg", "2.jpeg","3.jpeg"];
+slide = document.getElementById("i1");
+count=-1;
+slide.src=photos[2];
+
+function forward()
+{
+count = count+1;
+if(count<=photos.length)
+    {
+    if(count==photos.length)
+    {
+    count =0;
+    }
+slide.src = photos[count];
+    }
+
+}
+function backward()
+{
+count = count-1;
+if(count<=photos.length)
+    {
+    if(count==-1)
+    {
+    count =2;
+    }
+slide.src = photos[count];
+    }
+
+}
+</script>
+</body>
+
+
+</html>
