@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arvo", serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(90deg, #6dc7ed 10%, #68ede9 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 150px 100px;
+  background-color: black;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  font-size: 1.4rem;
+  place-content: center;
+}
+.container {
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+  text-align: center;
+  min-height: 200px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+.info {
+  align-self: center;
+}
+.emoji {
+  margin-bottom: 1rem;
+}
+.stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*! row reverse for star seletion property */
+  flex-direction: row-reverse;
+}
+.star svg {
+  width: 50px;
+  height: 85px;
+  padding: 0 5px;
+  fill: grey;
+  stroke: none;
+}
+
+.selected svg,.selected ~ .star svg
+ {
+  fill: #ffc107;
+}
+.star:hover svg,
+.star:hover ~ .star svg {
+  fill: gold;
+}
