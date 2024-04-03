@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    width: 100%;
+    height: 100vh;
+    background: #0c0c0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    height: 400px;
+    display: flex;
+    justify-content: start;
+  }
+  .card {
+    width: 80px;
+    border-radius: 0.75rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+  }
+  .card > .row {
+    display: flex;
+    color: white;
+  }
+  .card > .row > .icon {
+    background-image: linear-gradient(90deg, #7950f2 5%, #f783ac 95%);
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+  }
+  .card > .row > .description {
+    width: 520px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(30px);
+    transition: all 0.3s ease;
+    opacity: 0;
+  }
+  h4 {
+    text-transform: uppercase;
+  }
+  p {
+    color: white;
+    padding-top: 5px;
+    margin-left: 2px;
+  }
+  input {
+    display: none;
+  }
+  input:checked + label {
+    width: 600px;
+  }
+  input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  .card[for="check1"] {
+    background: url(./img/𝘖𝘯𝘦\ 𝘗𝘪𝘦𝘤𝘦.jpeg);
+    background-size: cover;
+  }
+  .card[for="check2"] {
+    background: url(./img/c661ea00-3ba2-4a73-8b86-8705315c4d23.jpeg);
+    background-size: cover;
+  }
+  .card[for="check3"] {
+    background: url(./img/download.jpeg);
+    background-size: cover;
+  }
+  .card[for="check4"] {
+    background: url(./img/f2c50a2a-c737-4712-914f-eb1e50ab6c51.jpeg);
+    background-size: cover;
+  }
