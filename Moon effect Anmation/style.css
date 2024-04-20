@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: #000;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.moon {
+  width: 250px;
+  height: 250px;
+  background-color: #ffff;
+  background-image: linear-gradient(90deg, #a1c4fd 10%, #c2e9fb 90%);
+  border-radius: 50%;
+  position: relative;
+}
+.moon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #ffff;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  animation: 3.2s moon linear infinite alternate;
+}
+.moon::after {
+  position: absolute;
+  content: "Moon";
+  color: white;
+  top: 300px;
+  left: 90px;
+  font-size: 2.5rem;
+  background: -webkit-linear-gradient(#c2e9fb, #a1c4fd );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes moon {
+  0% {
+    transform: translateX(40px) scale(0.9);
+    box-shadow: none;
+  }
+  50% {
+    transform: translate(0px, 0px) scale(1.02);
+    box-shadow: 0 0 10px #7950f2, 0 0 80px 2px #4dabf7;
+  }
+  100% {
+    transform: translateX(-40px) scale(0.9);
+    box-shadow: none;
+  }
+}
