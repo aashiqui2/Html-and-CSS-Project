@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		
+    <link rel="stylesheet" href="styles/layout.css"> 
+    <script type="text/javascript" src="demo.js"> </script>
+</head>	 
+<body>
+<h2> JavaScript Date எடுத்துக்காட்டு</h2>
+
+		<p id = "p1">  </p>
+	<button onclick="start()"> Start </button>
+	<button onclick = "stop()"> Stop </button>
+	<script>
+		function changeColor()
+		{
+			date = new Date(); 
+			hour = date.getHours(); 
+			minute = date.getMinutes(); 
+			second = date.getSeconds(); 
+			fulldate = date.toLocaleTimeString()
+			//fulldate = date.toLocaleTimeString('en-US')
+			fulldate = date.toLocaleTimeString('en-GB')
+			x = document.getElementById("p1");
+		    x.innerHTML = fulldate; 
+			if(second%2==0)
+			{
+				x.style.color="red";
+			}
+			else
+			{
+				x.style.color = "blue";
+			}
+       				
+		}
+	function start()
+	{
+		clear = setInterval(changeColor, 1000); 
+	}
+	function stop()
+	{
+		clearInterval(clear); 	
+	}
+	</script>
+
+	</body>
+</html>
+
+demo.js: 
+--------
+
